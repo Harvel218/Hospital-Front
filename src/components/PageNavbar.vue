@@ -37,7 +37,7 @@ export default class PageNavbar extends Vue {
     padding: 10px;
 
     &.router-link-exact-active {
-      opacity: 70%;
+      opacity: .7;
     }
   }
 }
