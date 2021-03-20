@@ -1,16 +1,17 @@
 <template>
   <div class="home">
-    <h1>home page - to be done</h1>
+    <h1>Login / Register - To Be Finished</h1>
     <article class="form_wrapper">
-      <h3> Home page - some content /etc</h3>
+      <LoginForm />
     </article>
   </div>
 </template>
 
 <script>
-
+import LoginForm from "@/components/form/LoginForm";
 export default {
-
+  components: { LoginForm },
+  // ...
 };
 </script>
 <style scoped lang="scss">

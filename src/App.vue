@@ -1,15 +1,14 @@
 <template>
-  <PageNavbar />
-  <router-view />
+
+  <component :is="this.$route.meta.layout || 'div'">
+    <router-view />
+  </component>
 </template>
 
 <script>
-import PageNavbar from "@/components/PageNavbar";
 
 export default {
-  components: {
-    PageNavbar,
-  },
+  name: "App",
   // ...
 };
 </script>

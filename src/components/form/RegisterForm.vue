@@ -54,10 +54,10 @@ export default {
     // Using yup to generate a validation schema
     // https://vee-validate.logaretm.com/v4/guide/validation#validation-schemas-with-yup
     const schema = Yup.object().shape({
-      name: Yup.string().required(),
-      email: Yup.string().email().required(),
-      password: Yup.string().min(6).required(),
-      confirmPassword: Yup.string()
+      name: Yup.string().trim().min(3).required(),
+      email: Yup.string().trim().email().required(),
+      password: Yup.string().trim().min(6).required(),
+      confirmPassword: Yup.string().trim().label('confirm password')
 
         .required()
         .oneOf([Yup.ref("password")], "Passwords do not match"),
