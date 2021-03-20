@@ -1,17 +1,34 @@
 <template>
   <div class="home">
-<h1>Login / Register - To Be Done</h1>
+    <h1>Login / Register - To Be Done</h1>
+    <article class="form_wrapper">
+      <LoginForm />
+    </article>
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
-// import HelloWorld from "@/components/example.component..vue"; // @ is an alias to /src
-
-@Options({
-  components: {
-    // HelloWorld
-  }
-})
-export default class Home extends Vue {}
+<script>
+import LoginForm from "@/components/form/LoginForm";
+export default {
+  components: { LoginForm },
+  // ...
+};
 </script>
+<style scoped lang="scss">
+@import "@/scss/global.scss";
+
+.home {
+  width: 100%;
+
+  a {
+    font-weight: bold;
+    color: $font_color;
+    font-size: 20px;
+    padding: 10px;
+
+    &.router-link-exact-active {
+      opacity: 0.7;
+    }
+  }
+}
+</style>
