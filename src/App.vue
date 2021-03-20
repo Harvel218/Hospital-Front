@@ -1,15 +1,12 @@
 <template>
-  <PageNavbar />
-  <router-view />
+  <component :is="$route.meta.layout || 'div'">
+    <router-view />
+  </component>
 </template>
 
 <script>
-import PageNavbar from "@/components/PageNavbar";
-
 export default {
-  components: {
-    PageNavbar,
-  },
+  name: "App",
   // ...
 };
 </script>
@@ -19,7 +16,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+* {
+  box-sizing: border-box;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
